@@ -24,12 +24,14 @@ body {
 }
 
 nav {
+  transform: translateX(100%);
   position: fixed;
   right: 0;
   top: 0;
   height: 100vh;
   background: white;
   width: 60%;
+  transition: transform 0.3s ease-in-out;
 }
 nav .toggle-close-btn {
   float: right;
@@ -67,6 +69,7 @@ nav .main-links .features-list .sub-menu-1 li img {
 }
 nav .main-links .features-list:hover .sub-menu-1 {
   display: block;
+  transition: 0.5s;
 }
 nav .main-links .company-list {
   display: block;
@@ -161,4 +164,8 @@ nav .register .register-btn {
   margin-bottom: 3.5em;
   justify-content: space-between;
   display: flex;
+}
+
+.show-nav {
+  transform: translateX(0%);
 }/*# sourceMappingURL=style.css.map */
