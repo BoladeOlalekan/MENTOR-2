@@ -33,6 +33,9 @@ nav {
   width: 60%;
   transition: transform 0.3s ease-in-out;
 }
+nav .up {
+  display: none;
+}
 nav .toggle-close-btn {
   float: right;
   margin: 1em 0.8em;
@@ -40,17 +43,20 @@ nav .toggle-close-btn {
 }
 nav a {
   color: var(--tertiary-color);
+  cursor: pointer;
 }
 nav .main-links {
   margin-top: 4em;
   margin-left: -0.5em;
+  cursor: pointer;
 }
 nav .main-links .features-list {
   display: block;
   padding: 1em;
   font-size: 19px;
+  color: var(--tertiary-color);
 }
-nav .main-links .features-list .up-down {
+nav .main-links .features-list .down {
   display: inline-flex;
   margin-left: 0.5rem;
 }
@@ -59,6 +65,7 @@ nav .main-links .features-list .sub-menu-1 {
   font-size: 19px;
   margin-left: -1rem;
   margin-top: 1rem;
+  z-index: 1;
 }
 nav .main-links .features-list .sub-menu-1 li {
   padding: 1em;
@@ -67,14 +74,18 @@ nav .main-links .features-list .sub-menu-1 li img {
   margin-right: 1rem;
   margin-bottom: -0.1rem;
 }
-nav .main-links .features-list:hover .sub-menu-1 {
-  display: block;
-  transition: 0.5s;
+nav .main-links .features-list:hover {
+  color: var(--tertiary-color);
+}
+nav .main-links .features-list:focus {
+  color: var(--tertiary-color);
 }
 nav .main-links .company-list {
   display: block;
   padding: 1em;
   font-size: 19px;
+  color: var(--tertiary-color);
+  cursor: pointer;
 }
 nav .main-links .company-list .up-down {
   display: inline-flex;
@@ -85,6 +96,7 @@ nav .main-links .company-list .sub-menu-2 {
   font-size: 19px;
   margin-left: -1rem;
   margin-top: 1rem;
+  z-index: 1;
 }
 nav .main-links .company-list .sub-menu-2 li {
   padding: 1em;
@@ -93,8 +105,11 @@ nav .main-links .company-list .sub-menu-2 li img {
   margin-right: 1rem;
   margin-bottom: -0.1rem;
 }
-nav .main-links .company-list:hover .sub-menu-2 {
-  display: block;
+nav .main-links .company-list:hover {
+  color: var(--tertiary-color);
+}
+nav .main-links .company-list:focus {
+  color: var(--tertiary-color);
 }
 nav .main-links .other-list {
   display: block;
@@ -134,10 +149,9 @@ nav .register .register-btn {
 
 .remote {
   text-align: center;
-  justify-content: flex-end;
-  justify-items: center;
-  justify-self: center;
+  justify-content: center;
   width: 100%;
+  margin-top: -2em;
 }
 .remote h1 {
   min-width: 100%;
@@ -146,9 +160,11 @@ nav .register .register-btn {
 }
 .remote p {
   line-gap-override: 0.5em;
-  margin-bottom: 2em;
+  margin: -1.5em 1em 2em 1em;
+  line-height: 1.5em;
   font-size: 18px;
   color: var(--tertiary-color);
+  font-weight: 600;
 }
 .remote a {
   border: 1px solid --secondary-color;
@@ -157,6 +173,7 @@ nav .register .register-btn {
   border-radius: 0.7em;
   padding: 0.7em 1em;
   outline: none;
+  font-weight: 600;
 }
 
 .sponsored-links {
@@ -168,4 +185,8 @@ nav .register .register-btn {
 
 .show-nav {
   transform: translateX(0%);
+}
+
+.show-drop-down {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

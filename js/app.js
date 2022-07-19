@@ -9,3 +9,10 @@ open.addEventListener('click' , () => {
 closeBtn.addEventListener('click' , () => {
     nav.classList.remove('show-nav')
 })
+
+const featureBtn = document.querySelector('.featuresBtn');
+const main = document.querySelector('.sub-menu-1');
+
+featureBtn.addEventListener('click' , () => {
+    main.classList.toggle('show-drop-down')
+})

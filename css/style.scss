@@ -34,6 +34,10 @@ nav{
     width: 60%;
     transition: transform .3s ease-in-out;
 
+    .up{
+        display: none;
+    }
+
     .toggle-close-btn{
         float: right;
         margin: 1em .8em;
@@ -42,18 +46,21 @@ nav{
 
     a{
         color: var(--tertiary-color);
+        cursor: pointer;
     }
 
     .main-links{
         margin-top: 4em;
         margin-left: -.5em;
+        cursor: pointer;
 
         .features-list{
             display: block;
             padding: 1em;
             font-size: 19px;
+            color: var(--tertiary-color);
     
-            .up-down{
+            .down{
                 display: inline-flex;
                 margin-left: .5rem;
             }
@@ -63,6 +70,7 @@ nav{
                 font-size: 19px;
                 margin-left: -1rem;
                 margin-top: 1rem;
+                z-index: 1;
 
 
                 li{
@@ -76,10 +84,11 @@ nav{
             }
 
             &:hover{
-                .sub-menu-1{
-                    display: block;
-                    transition: .5s;
-                }
+                color: var(--tertiary-color);
+            }
+
+            &:focus{
+                color: var(--tertiary-color);
             }
         }
 
@@ -87,6 +96,8 @@ nav{
             display: block;
             padding: 1em;
             font-size: 19px;
+            color: var(--tertiary-color);
+            cursor: pointer;
     
             .up-down{
                 display: inline-flex;
@@ -98,6 +109,7 @@ nav{
                 font-size: 19px;
                 margin-left: -1rem;
                 margin-top: 1rem;
+                z-index: 1;
 
                 li{
                     padding: 1em;
@@ -110,9 +122,11 @@ nav{
             }
 
             &:hover{
-                .sub-menu-2{
-                    display: block;
-                }
+                color: var(--tertiary-color);
+            }
+
+            &:focus{
+                color: var(--tertiary-color);
             }
         }
 
@@ -159,10 +173,9 @@ nav{
 
 .remote{
     text-align: center;
-    justify-content: flex-end;
-    justify-items: center;
-    justify-self: center;
+    justify-content: center;
     width: 100%;
+    margin-top: -2em;
 
     h1{
         min-width: 100%;
@@ -172,9 +185,11 @@ nav{
 
     p{
         line-gap-override: .5em;
-        margin-bottom: 2em;
+        margin: -1.5em 1em 2em 1em;
+        line-height: 1.5em;
         font-size: 18px;
         color: var(--tertiary-color);
+        font-weight: 600;
     }
 
     a{
@@ -184,6 +199,7 @@ nav{
         border-radius: .7em;
         padding: .7em 1em;
         outline: none;
+        font-weight: 600;
     }
 }
 
@@ -196,4 +212,8 @@ nav{
 
 .show-nav{
     transform: translateX(0%);
+}
+
+.show-drop-down{
+    display: block;
 }
