@@ -38,87 +38,28 @@ nav .toggle-close-btn {
   margin: 1em 0.8em;
   cursor: pointer;
 }
-nav a {
-  color: var(--tertiary-color);
+nav .dropdown-1 {
+  min-width: 15em;
+  position: relative;
+  margin: 2em;
 }
-nav .main-links {
-  margin-top: 4em;
-  margin-left: -0.5em;
+nav .dropdown-1 * {
+  box-sizing: border-box;
 }
-nav .main-links .features-list {
-  display: block;
-  padding: 1em;
-  font-size: 19px;
-}
-nav .main-links .features-list .up-down {
-  display: inline-flex;
-  margin-left: 0.5rem;
-}
-nav .main-links .features-list .sub-menu-1 {
-  display: none;
-  font-size: 19px;
-  margin-left: -1rem;
-  margin-top: 1rem;
-}
-nav .main-links .features-list .sub-menu-1 li {
-  padding: 1em;
-}
-nav .main-links .features-list .sub-menu-1 li img {
-  margin-right: 1rem;
-  margin-bottom: -0.1rem;
-}
-nav .main-links .features-list:hover .sub-menu-1 {
-  display: block;
-  transition: 0.5s;
-}
-nav .main-links .company-list {
-  display: block;
-  padding: 1em;
-  font-size: 19px;
-}
-nav .main-links .company-list .up-down {
-  display: inline-flex;
-  margin-left: 0.5rem;
-}
-nav .main-links .company-list .sub-menu-2 {
-  display: none;
-  font-size: 19px;
-  margin-left: -1rem;
-  margin-top: 1rem;
-}
-nav .main-links .company-list .sub-menu-2 li {
-  padding: 1em;
-}
-nav .main-links .company-list .sub-menu-2 li img {
-  margin-right: 1rem;
-  margin-bottom: -0.1rem;
-}
-nav .main-links .company-list:hover .sub-menu-2 {
-  display: block;
-}
-nav .main-links .other-list {
-  display: block;
-  padding: 1em;
-  font-size: 19px;
-}
-nav .register {
-  text-align: center;
+nav .dropdown-1 .main-links {
+  color: #fff;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
 }
-nav .register .login-btn {
-  display: block;
-  padding: 1em;
-  font-size: 19px;
-}
-nav .register .register-btn {
-  border: 2px solid var(--tertiary-color);
-  border-radius: 0.7em;
-  background: transparent;
-  outline: none;
-  padding: 0.5rem 4.2rem;
-  font-size: 19px;
-  color: var(--tertiary-color);
+nav .dropdown-1 .caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff;
+  transition: 0.3s;
 }
 
 .toggle-menu-btn {
