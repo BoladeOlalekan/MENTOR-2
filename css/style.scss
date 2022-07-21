@@ -34,6 +34,10 @@ nav{
     width: 60%;
     transition: transform .3s ease-in-out;
 
+    .up{
+        display: none;
+    }
+
     .toggle-close-btn{
         float: right;
         margin: 1em .8em;
@@ -82,10 +86,9 @@ nav{
 
 .remote{
     text-align: center;
-    justify-content: flex-end;
-    justify-items: center;
-    justify-self: center;
+    justify-content: center;
     width: 100%;
+    margin-top: -2em;
 
     h1{
         min-width: 100%;
@@ -95,9 +98,11 @@ nav{
 
     p{
         line-gap-override: .5em;
-        margin-bottom: 2em;
+        margin: -1.5em 1em 2em 1em;
+        line-height: 1.5em;
         font-size: 18px;
         color: var(--tertiary-color);
+        font-weight: 600;
     }
 
     a{
@@ -107,6 +112,7 @@ nav{
         border-radius: .7em;
         padding: .7em 1em;
         outline: none;
+        font-weight: 600;
     }
 }
 
@@ -119,4 +125,8 @@ nav{
 
 .show-nav{
     transform: translateX(0%);
+}
+
+.show-drop-down{
+    display: block;
 }
