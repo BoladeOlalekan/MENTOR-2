@@ -41,28 +41,61 @@ nav .toggle-close-btn {
   margin: 1em 0.8em;
   cursor: pointer;
 }
-nav .dropdown-1 {
+nav .dropdowns {
   min-width: 15em;
   position: relative;
   margin: 2em;
 }
-nav .dropdown-1 * {
+nav .dropdowns * {
   box-sizing: border-box;
 }
-nav .dropdown-1 .main-links {
+nav .dropdowns .main-links {
   color: #fff;
   display: flex;
   align-items: center;
   cursor: pointer;
   transition: 0.3s;
+  margin-top: 4em;
 }
-nav .dropdown-1 .caret {
+nav .dropdowns .features-list {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: block;
+  padding-right: 0.5em;
+}
+nav .dropdowns .caret {
   width: 0;
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 6px solid #fff;
   transition: 0.3s;
+  margin-top: -7px;
+}
+nav .dropdowns .caret .up {
+  display: none;
+}
+nav .dropdowns .sub-menu-1 {
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transform: translateX(-50%);
+  display: none;
+  z-index: 1;
+}
+nav .dropdowns .sub-menu-1 li {
+  display: block;
+  padding: 0.5em;
+  margin-left: -1em;
+}
+nav .dropdowns .sub-menu-1 a {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+}
+nav .dropdowns .sub-menu-1 a img {
+  padding-right: 0.5em;
+  width: 1.8rem;
 }
 
 .toggle-menu-btn {
@@ -116,6 +149,13 @@ nav .dropdown-1 .caret {
   transform: translateX(0%);
 }
 
-.show-drop-down {
+.menu-down {
+  display: block;
+}
+
+.caret-rotate .down {
+  display: none;
+}
+.caret-rotate .up {
   display: block;
 }/*# sourceMappingURL=style.css.map */

@@ -44,7 +44,7 @@ nav{
         cursor: pointer;
     }
 
-    .dropdown-1{
+    .dropdowns{
         min-width: 15em;
         position: relative;
         margin: 2em;
@@ -60,6 +60,16 @@ nav{
             align-items: center;
             cursor: pointer;
             transition: .3s;
+            margin-top: 4em;
+        }
+
+        .features-list{
+            color: hsl(0, 0%, 41%);
+            font-weight: 500;
+            font-size: 1.2rem;
+            display: block;
+            padding-right: .5em;
+
         }
 
         .caret{
@@ -69,6 +79,37 @@ nav{
             border-right: 5px solid transparent;
             border-top: 6px solid #fff;
             transition: .3s;
+            margin-top: -7px;
+
+            .up{
+                display: none;
+            }
+        }
+
+        .sub-menu-1{
+            list-style: none;
+            font-weight: 500;
+            font-size: 1.2rem;
+            transform: translateX(-50%);
+            //opacity: 0;
+            display: none;
+            z-index: 1;
+
+            li{
+                display: block;
+                padding: .5em;
+                margin-left: -1em;
+            }
+
+            a{
+                color: hsl(0, 0%, 41%);
+                font-weight: 500;
+
+                img{
+                    padding-right: .5em;
+                    width: 1.8rem;
+                }
+            }
         }
     }
 }
@@ -127,6 +168,16 @@ nav{
     transform: translateX(0%);
 }
 
-.show-drop-down{
+.menu-down{
     display: block;
+}
+
+.caret-rotate{
+    .down{
+        display: none;
+    }
+
+    .up{
+        display: block;
+    }
 }
