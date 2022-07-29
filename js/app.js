@@ -10,9 +10,18 @@ closeBtn.addEventListener('click' , () => {
     nav.classList.remove('show-nav')
 })
 
-const dropdown = document.querySelector('.dropdowns');
+const subMenuOne = document.querySelector('.sub-menu-1');
+const featureBtn = document.querySelector('.features-link');
 
-dropdown.forEach(dropdowns => {
-    const select = dropdowns.querySelector('.main-links');
-    const caret = dropdowns.querySelector('.caret');
+featureBtn.addEventListener('click' , () => {
+    subMenuOne.classList.toggle('show-sub-menu');
+    featureBtn.classList.toggle('caret-rotate');
+})
+
+const subMenuTwo = document.querySelector('.sub-menu-2');
+const companyBtn = document.querySelector('.company-link');
+
+companyBtn.addEventListener('click' , () => {
+    subMenuTwo.classList.toggle('show-sub-menu-2');
+    companyBtn.classList.toggle('caret-rotate-2');
 })

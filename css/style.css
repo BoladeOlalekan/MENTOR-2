@@ -14,6 +14,16 @@ body {
   background: var(--primary-color);
 }
 
+.sub-menu-1 {
+  opacity: 0;
+  height: 0;
+}
+
+.sub-menu-2 {
+  opacity: 0;
+  height: 0;
+}
+
 .header-container {
   margin-top: 1.5em;
 }
@@ -33,69 +43,165 @@ nav {
   width: 60%;
   transition: transform 0.3s ease-in-out;
 }
-nav .up {
-  display: none;
-}
 nav .toggle-close-btn {
   float: right;
-  margin: 1em 0.8em;
+  margin: 1.7em 1.3em;
   cursor: pointer;
 }
-nav .dropdowns {
+nav .features-list {
   min-width: 15em;
   position: relative;
-  margin: 2em;
+  margin: 5rem auto auto 2rem;
 }
-nav .dropdowns * {
+nav .features-list * {
   box-sizing: border-box;
 }
-nav .dropdowns .main-links {
-  color: #fff;
+nav .features-list .features-link {
   display: flex;
-  align-items: center;
   cursor: pointer;
   transition: 0.3s;
   margin-top: 4em;
 }
-nav .dropdowns .features-list {
+nav .features-list .features-link .features-toggle {
   color: hsl(0deg, 0%, 41%);
   font-weight: 500;
   font-size: 1.2rem;
   display: block;
   padding-right: 0.5em;
 }
-nav .dropdowns .caret {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 6px solid #fff;
+nav .features-list .features-link .caret {
+  position: relative;
+  display: block;
+  top: 4px;
+}
+nav .features-list .features-link .caret .down {
   transition: 0.3s;
-  margin-top: -7px;
 }
-nav .dropdowns .caret .up {
-  display: none;
-}
-nav .dropdowns .sub-menu-1 {
+nav .features-list .sub-menu-1 {
   list-style: none;
   font-weight: 500;
   font-size: 1.2rem;
-  transform: translateX(-50%);
-  display: none;
   z-index: 1;
+  transition: 0.3s;
 }
-nav .dropdowns .sub-menu-1 li {
+nav .features-list .sub-menu-1 li {
   display: block;
   padding: 0.5em;
   margin-left: -1em;
 }
-nav .dropdowns .sub-menu-1 a {
+nav .features-list .sub-menu-1 li a {
   color: hsl(0deg, 0%, 41%);
   font-weight: 500;
 }
-nav .dropdowns .sub-menu-1 a img {
+nav .features-list .sub-menu-1 li a img {
   padding-right: 0.5em;
   width: 1.8rem;
+}
+nav .features-list .sub-menu-1 li a:hover {
+  font-weight: 700;
+}
+nav .company-list {
+  min-width: 15em;
+  position: relative;
+  margin: -3rem auto auto 2rem;
+}
+nav .company-list * {
+  box-sizing: border-box;
+}
+nav .company-list .company-link {
+  display: flex;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 4em;
+}
+nav .company-list .company-link .company-toggle {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: block;
+  padding-right: 0.5em;
+}
+nav .company-list .company-link .caret {
+  position: relative;
+  display: block;
+  top: 4px;
+}
+nav .company-list .company-link .caret .down {
+  transition: 0.3s;
+}
+nav .company-list .sub-menu-2 {
+  list-style: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  z-index: 1;
+  transition: 0.3s;
+}
+nav .company-list .sub-menu-2 li {
+  display: block;
+  padding: 0.5em;
+  margin-left: -1em;
+}
+nav .company-list .sub-menu-2 li a {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+}
+nav .company-list .sub-menu-2 li a:hover {
+  font-weight: 700;
+}
+nav .career {
+  display: block;
+  margin: 1.2rem auto auto 2rem;
+}
+nav .career a {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+nav .career a:hover {
+  font-weight: 700;
+}
+nav .about {
+  display: block;
+  margin: 2.5rem auto auto 2rem;
+}
+nav .about a {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+nav .about a:hover {
+  font-weight: 700;
+}
+nav .register {
+  justify-content: center;
+  text-align: center;
+}
+nav .register .login-btn {
+  display: block;
+  margin-top: 2rem;
+}
+nav .register .login-btn a {
+  color: hsl(0deg, 0%, 41%);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+nav .register .login-btn a:hover {
+  font-weight: 700;
+}
+nav .register .register-btn {
+  border: 3px solid hsl(0deg, 0%, 41%);
+  border-radius: 0.7em;
+  background: transparent;
+  color: hsl(0deg, 0%, 41%);
+  font-size: 1.2rem;
+  padding: 0.5rem 6rem;
+  margin-top: 1rem;
+  outline: none;
+}
+nav .register .register-btn:hover {
+  color: white;
+  background: hsl(0deg, 0%, 41%);
+  transition: 0.3s;
 }
 
 .toggle-menu-btn {
@@ -149,13 +255,24 @@ nav .dropdowns .sub-menu-1 a img {
   transform: translateX(0%);
 }
 
-.menu-down {
-  display: block;
+.show-sub-menu {
+  opacity: 1;
+  height: auto;
+  transition: 0.3s;
 }
 
 .caret-rotate .down {
-  display: none;
+  transform: rotate(180deg);
+  transition: 0.3s;
 }
-.caret-rotate .up {
-  display: block;
+
+.show-sub-menu-2 {
+  opacity: 1;
+  height: auto;
+  transition: 0.3s;
+}
+
+.caret-rotate-2 .down {
+  transform: rotate(180deg);
+  transition: 0.3s;
 }/*# sourceMappingURL=style.css.map */

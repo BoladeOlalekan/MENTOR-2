@@ -14,6 +14,16 @@ body{
     background: var(--primary-color);
 }
 
+.sub-menu-1{
+    opacity: 0;
+    height: 0;
+}
+
+.sub-menu-2{
+    opacity: 0;
+    height: 0;
+}
+
 .header-container{
     margin-top: 1.5em;
 
@@ -34,55 +44,43 @@ nav{
     width: 60%;
     transition: transform .3s ease-in-out;
 
-    .up{
-        display: none;
-    }
-
     .toggle-close-btn{
         float: right;
-        margin: 1em .8em;
+        margin: 1.7em 1.3em;
         cursor: pointer;
     }
 
-    .dropdowns{
+    .features-list{
         min-width: 15em;
         position: relative;
-        margin: 2em;
+        margin: 5rem auto auto 2rem;
 
         *{
             box-sizing: border-box;
         }
 
-        .main-links{
-            color: #fff;
+        .features-link{
             display: flex;
-            //justify-content: space-between;
-            align-items: center;
             cursor: pointer;
             transition: .3s;
             margin-top: 4em;
-        }
 
-        .features-list{
-            color: hsl(0, 0%, 41%);
-            font-weight: 500;
-            font-size: 1.2rem;
-            display: block;
-            padding-right: .5em;
-
-        }
-
-        .caret{
-            width: 0;
-            height: 0; 
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-top: 6px solid #fff;
-            transition: .3s;
-            margin-top: -7px;
-
-            .up{
-                display: none;
+            .features-toggle{
+                color: hsl(0, 0%, 41%);
+                font-weight: 500;
+                font-size: 1.2rem;
+                display: block;
+                padding-right: .5em;
+            }
+            
+            .caret{
+                position: relative;
+                display: block;
+                top: 4px;
+                
+                .down{
+                    transition: .3s;
+                }
             }
         }
 
@@ -90,25 +88,152 @@ nav{
             list-style: none;
             font-weight: 500;
             font-size: 1.2rem;
-            transform: translateX(-50%);
-            //opacity: 0;
-            display: none;
             z-index: 1;
+            transition: .3s;
 
             li{
                 display: block;
                 padding: .5em;
                 margin-left: -1em;
+
+                a{
+                    color: hsl(0, 0%, 41%);
+                    font-weight: 500;
+    
+                    img{
+                        padding-right: .5em;
+                        width: 1.8rem;
+                    }
+
+                    &:hover{
+                        font-weight: 700;
+                    }
+                }
             }
+        }
+    }
+
+    .company-list{
+        min-width: 15em;
+        position: relative;
+        margin: -3rem auto auto 2rem;
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .company-link{
+            display: flex;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: 4em;
+
+            .company-toggle{
+                color: hsl(0, 0%, 41%);
+                font-weight: 500;
+                font-size: 1.2rem;
+                display: block;
+                padding-right: .5em;
+            }
+            
+            .caret{
+                position: relative;
+                display: block;
+                top: 4px;
+                
+                .down{
+                    transition: .3s;
+                }
+            }
+        }
+
+        .sub-menu-2{
+            list-style: none;
+            font-weight: 500;
+            font-size: 1.2rem;
+            z-index: 1;
+            transition: .3s;
+
+            li{
+                display: block;
+                padding: .5em;
+                margin-left: -1em;
+
+                a{
+                    color: hsl(0, 0%, 41%);
+                    font-weight: 500;
+
+                    &:hover{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .career{
+        display: block;
+        margin: 1.2rem auto auto 2rem;
+
+        a{
+            color: hsl(0, 0%, 41%);
+            font-weight: 500;
+            font-size: 1.2rem;
+
+            &:hover{
+                font-weight: 700;
+            }
+        }
+    }
+
+    .about{
+        display: block;
+        margin: 2.5rem auto auto 2rem;
+
+        a{
+            color: hsl(0, 0%, 41%);
+            font-weight: 500;
+            font-size: 1.2rem;
+
+            &:hover{
+                font-weight: 700;
+            }
+        }
+    }
+
+    .register{
+        justify-content: center;
+        text-align: center;
+
+        .login-btn{
+            display: block;
+            margin-top: 2rem;
 
             a{
                 color: hsl(0, 0%, 41%);
                 font-weight: 500;
+                font-size: 1.2rem;
 
-                img{
-                    padding-right: .5em;
-                    width: 1.8rem;
+                &:hover{
+                    font-weight: 700;
                 }
+            }
+        }
+
+        .register-btn{
+            border: 3px solid hsl(0, 0%, 41%);
+            border-radius: .7em;
+            background: transparent;
+            color: hsl(0, 0%, 41%);
+            font-size: 1.2rem;
+            padding: .5rem 6rem;
+            margin-top: 1rem;
+            outline: none;
+
+            &:hover{
+                color: white;
+                background: hsl(0, 0%, 41%);
+                transition: .3s;
             }
         }
     }
@@ -168,16 +293,28 @@ nav{
     transform: translateX(0%);
 }
 
-.menu-down{
-    display: block;
+.show-sub-menu{
+    opacity: 1;
+    height: auto;
+    transition: .3s;
 }
 
 .caret-rotate{
     .down{
-        display: none;
+        transform: rotate(180deg);
+        transition: .3s;
     }
+}
 
-    .up{
-        display: block;
+.show-sub-menu-2{
+    opacity: 1;
+    height: auto;
+    transition: .3s;
+}
+
+.caret-rotate-2{
+    .down{
+        transform: rotate(180deg);
+        transition: .3s;
     }
 }
