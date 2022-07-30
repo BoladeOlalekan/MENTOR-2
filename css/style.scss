@@ -247,8 +247,14 @@ nav{
 
 .remote-img{
     margin-top: 1em;
-    img{
+    width: 100%;
+
+    .mobile-img{
         width: 100%;
+    }
+
+    .desktop-img{
+        display: none;
     }
 }
 
@@ -301,15 +307,12 @@ nav{
 }
 
 .sponsored-links{
-    margin-top: 3.5em;
-    margin-bottom: 3.5em;
-    justify-content: space-between;
-    display: flex;
-    gap: 1rem;
-
-    .sponsored-img{
-        margin-right: .5rem;
-    }
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: .5rem;
+    gap: .5rem;
 }
 
 .show-nav{
@@ -346,5 +349,62 @@ nav{
     .toggle-close-btn{
         transform: rotate(90deg);
         transition: .3s;
+    }
+}
+
+@media  only screen and (min-width: 912px) {
+    .toggle-menu-btn{
+        display: none;
+    }
+
+    nav{
+        transform: translateX(0);
+        position: unset;
+        display: block;
+        width: auto;
+        height: 0;
+        background: none;
+
+        .toggle-close-btn{
+            display: none;
+        }
+
+        .all-list{
+            display: flex;
+
+            .features-list{
+                position: relative;
+                top: -9rem;
+                left: -2rem;
+            }
+
+            .company-list{
+                position: relative;
+                top: -1rem;
+                left: -10.5rem;
+            }
+
+            .career{
+                position: relative;
+                top: -1.2rem;
+                left: -18.5rem;
+            }
+            .about{
+                position: relative;
+                top: -2.5rem;
+                left: -17rem;
+            }
+        }
+    }
+
+    .remote-img{
+        .mobile-img{
+            display: none;
+        }
+
+        .desktop-img{
+            display: block;
+            width: 100%;
+        }
     }
 }

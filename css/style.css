@@ -212,9 +212,13 @@ nav .register .register-btn:hover {
 
 .remote-img {
   margin-top: 1em;
-}
-.remote-img img {
   width: 100%;
+}
+.remote-img .mobile-img {
+  width: 100%;
+}
+.remote-img .desktop-img {
+  display: none;
 }
 
 .remote {
@@ -261,14 +265,13 @@ nav .register .register-btn:hover {
 }
 
 .sponsored-links {
-  margin-top: 3.5em;
-  margin-bottom: 3.5em;
-  justify-content: space-between;
-  display: flex;
-  gap: 1rem;
-}
-.sponsored-links .sponsored-img {
-  margin-right: 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  gap: 0.5rem;
 }
 
 .show-nav {
@@ -300,4 +303,51 @@ nav .register .register-btn:hover {
 .rotate-close .toggle-close-btn {
   transform: rotate(90deg);
   transition: 0.3s;
+}
+
+@media only screen and (min-width: 912px) {
+  .toggle-menu-btn {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: 0;
+    background: none;
+  }
+  nav .toggle-close-btn {
+    display: none;
+  }
+  nav .all-list {
+    display: flex;
+  }
+  nav .all-list .features-list {
+    position: relative;
+    top: -9rem;
+    left: -2rem;
+  }
+  nav .all-list .company-list {
+    position: relative;
+    top: -1rem;
+    left: -10.5rem;
+  }
+  nav .all-list .career {
+    position: relative;
+    top: -1.2rem;
+    left: -18.5rem;
+  }
+  nav .all-list .about {
+    position: relative;
+    top: -2.5rem;
+    left: -17rem;
+  }
+  .remote-img .mobile-img {
+    display: none;
+  }
+  .remote-img .desktop-img {
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
