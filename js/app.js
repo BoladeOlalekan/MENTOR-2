@@ -8,6 +8,7 @@ open.addEventListener('click' , () => {
 
 closeBtn.addEventListener('click' , () => {
     nav.classList.remove('show-nav')
+    nav.classList.toggle('rotate-close')
 })
 
 const subMenuOne = document.querySelector('.sub-menu-1');

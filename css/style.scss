@@ -42,7 +42,7 @@ nav{
     height: 100vh;
     background: white;
     width: 60%;
-    transition: transform .3s ease-in-out;
+    transition: transform .5s ease-in-out;
 
     .toggle-close-btn{
         float: right;
@@ -241,6 +241,8 @@ nav{
 
 .toggle-menu-btn{
     cursor: pointer;
+    width: 2rem;
+    margin-bottom: 1rem;
 }
 
 .remote-img{
@@ -251,34 +253,50 @@ nav{
 }
 
 .remote{
-    text-align: center;
-    justify-content: center;
     width: 100%;
-    margin-top: -2em;
 
     h1{
-        min-width: 100%;
-        margin-top: 2em;
-        font-size: 2.8rem;
+        font-size: 2.5rem;
+        margin: 2rem 0 1rem 0;
+        justify-content: center;
+        text-align: center;
+        color: hsl(0, 0%, 8%);
+        font-weight: 700;
     }
 
     p{
         line-gap-override: .5em;
-        margin: -1.5em 1em 2em 1em;
+        margin: auto 1rem;
         line-height: 1.5em;
         font-size: 18px;
         color: var(--tertiary-color);
-        font-weight: 600;
+        font-weight: 500;
+        text-align: center;
     }
 
-    a{
-        border: 1px solid --secondary-color;
-        background: var(--secondary-color);
-        color: var(--primary-color);
-        border-radius: .7em;
-        padding: .7em 1em;
-        outline: none;
-        font-weight: 600;
+    button{
+        border: 1px solid hsl(0, 0%, 8%);
+        position: relative;
+        left: 50%;
+        top: 15px;
+        transform: translate(-50%);
+        background-color: hsl(0, 0%, 8%);
+        border-radius: .6rem;
+        padding: .5rem 1rem;
+        transition: .3s;
+        
+        a{
+            color: hsl(0, 0%, 98%);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        &:hover{
+            background-color:hsl(0, 0%, 98%);
+             a{
+                color: hsl(0, 0%, 8%);
+             }
+        }
     }
 }
 
@@ -287,6 +305,11 @@ nav{
     margin-bottom: 3.5em;
     justify-content: space-between;
     display: flex;
+    gap: 1rem;
+
+    .sponsored-img{
+        margin-right: .5rem;
+    }
 }
 
 .show-nav{
@@ -315,6 +338,13 @@ nav{
 .caret-rotate-2{
     .down{
         transform: rotate(180deg);
+        transition: .3s;
+    }
+}
+
+.rotate-close{
+    .toggle-close-btn{
+        transform: rotate(90deg);
         transition: .3s;
     }
 }
