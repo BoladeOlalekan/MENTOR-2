@@ -10,38 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="/images/favicon-32x32.png">
-    <script src="https://kit.fontawesome.com/9933f4bb5b.js" crossorigin="anonymous"></script></head>
+    <script src="https://kit.fontawesome.com/9933f4bb5b.js" crossorigin="anonymous"></script>
+</head>
 <body>
     <div class="header-container">
-        <header>
-                <a href="index.html"><img src="/images/logo.svg" alt="Logo"></a>
+        <div class="wrapper">
+            <header>
+                <a href="index.html"><img src="/images/logo.svg" alt="Logo" class="logo"></a>
+                
                 <nav>
                     <img src="/images/icon-close-menu.svg" alt="Close-menu" class="toggle-close-btn">
-                    <div class="all-list">
-                        <div class="features-list">
-                            <div class="features-link">
-                                <span class="features-toggle">Features</span>
+                    <ul>
+                        <li class="features-list">
+                            <span class="features-btn">
+                                Features
                                 <div class="caret"> <img src="/images/icon-arrow-down.svg" alt="" class="down"></div>
+                            </span> 
+                            <div class="sub-menu-1">
+                                <a href="#"><img src="/images/icon-todo.svg" alt="">Todo List</a>                              
+                                <a href="#"><img src="/images/icon-calendar.svg" alt="">Calendar</a>
+                                <a href="#"><img src="/images/icon-reminders.svg" alt="">Reminders</a>
+                                <a href="#"><img src="/images/icon-planning.svg" alt="">Planning</a>
                             </div>
-                            <ul class="sub-menu-1">
-                                <li><a href="#"><img src="/images/icon-todo.svg" alt="">Todo List</a></li>
-                                <li><a href="#"><img src="/images/icon-calendar.svg" alt="">Calendar</a></li>
-                                <li><a href="#"><img src="/images/icon-reminders.svg" alt="">Reminders</a></li>
-                                <li><a href="#"><img src="/images/icon-planning.svg" alt="">Planning</a></li>
-                            </ul>
-                        </div> 
-
-                        <div class="company-list">
-                            <div class="company-link">
-                                <span class="company-toggle">Company</span>
+                        </li>
+                   
+                        <li class="company-list">
+                            <span class="company-btn">
+                                Company
                                 <div class="caret"> <img src="/images/icon-arrow-down.svg" alt="" class="down"></div>
+                            </span> 
+                            <div class="sub-menu-2">
+                                <a href="#">History</a>                              
+                                <a href="#">Our Team</a>
+                                <a href="#">Blog</a>
                             </div>
-                            <ul class="sub-menu-2">
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Blog</a></li>
-                            </ul>
-                        </div> 
+                        </li>          
                    
                         <div class="career">
                             <span><a href="#">Careers</a></span>
@@ -50,14 +53,18 @@
                         <div class="about">
                             <span><a href="#">About</a></span> 
                         </div>
-                    </div>        
-                    <div class="register">
+                            
+                        <div class="register">
                         <li class="login-btn"><a href="#">Login</a></li>
                         <a href="#"><button class="register-btn">Register</button></a>
-                    </div>
+                        </div>
+                        </div> 
+                    </ul>     
                 </nav>
+                
                 <img src="/images/icon-menu.svg" alt="Open-menu" class="toggle-menu-btn">
-        </header>
+            </header>
+        </div>
     </div>
 
     <div class="remote-img">

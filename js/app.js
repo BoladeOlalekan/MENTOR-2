@@ -12,15 +12,14 @@ closeBtn.addEventListener('click' , () => {
 })
 
 const subMenuOne = document.querySelector('.sub-menu-1');
-const featureBtn = document.querySelector('.features-link');
+const featureBtn = document.querySelector('.features-btn');
+const subMenuTwo = document.querySelector('.sub-menu-2');
+const companyBtn = document.querySelector('.company-btn');
 
 featureBtn.addEventListener('click' , () => {
     subMenuOne.classList.toggle('show-sub-menu');
     featureBtn.classList.toggle('caret-rotate');
 })
-
-const subMenuTwo = document.querySelector('.sub-menu-2');
-const companyBtn = document.querySelector('.company-link');
 
 companyBtn.addEventListener('click' , () => {
     subMenuTwo.classList.toggle('show-sub-menu-2');
