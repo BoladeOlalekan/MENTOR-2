@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snap</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
@@ -22,44 +22,47 @@
                 <nav>
                     <img src="/images/icon-close-menu.svg" alt="Close-menu" class="toggle-close-btn">
                     <ul class="main-list">
-                        <li class="features-list">
-                            <span class="features-btn">
-                                Features
-                                <div class="caret"> <img src="/images/icon-arrow-down.svg" alt="" class="down"></div>
-                            </span> 
-            
-                                <ul class="sub-menu-1">
-                                    <li><a href="#"><img src="/images/icon-todo.svg" alt="">Todo List</a></li>
-                                    <li><a href="#"><img src="/images/icon-calendar.svg" alt="">Calendar</a></li>
-                                    <li><a href="#"><img src="/images/icon-reminders.svg" alt="">Reminders</a></li>
-                                    <li><a href="#"><img src="/images/icon-planning.svg" alt="">Planning</a></li> 
+                        <div class="primary-nav">
+                            <li class="features-list">
+                                <span class="features-btn">
+                                    Features
+                                    <div class="caret"> <img src="/images/icon-arrow-down.svg" alt="" class="down"></div>
+                                </span> 
+                
+                                    <ul class="sub-menu-1">
+                                        <li><a href="#"><img src="/images/icon-todo.svg" alt="">Todo List</a></li>
+                                        <li><a href="#"><img src="/images/icon-calendar.svg" alt="">Calendar</a></li>
+                                        <li><a href="#"><img src="/images/icon-reminders.svg" alt="">Reminders</a></li>
+                                        <li><a href="#"><img src="/images/icon-planning.svg" alt="">Planning</a></li> 
+                                    </ul>
+                            </li>
+                       
+                            <li class="company-list">
+                                <span class="company-btn">
+                                    Company
+                                    <div class="caret"> <img src="/images/icon-arrow-down.svg" alt="" class="down"></div>                               
+                                </span>
+                                <ul class="sub-menu-2">
+                                    <li><a href="#">History</a></li>
+                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="#">Blog</a></li>        
                                 </ul>
-                        </li>
-                   
-                        <li class="company-list">
-                            <span class="company-btn">
-                                Company
-                                <div class="caret"> <img src="/images/icon-arrow-down.svg" alt="" class="down"></div>                               
-                            </span>
-                            <ul class="sub-menu-2">
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Our Team</a></li>
-                                <li><a href="#">Blog</a></li>        
-                            </ul>
-                        </li>          
-                   
-                        <li class="career">
-                            <a href="#">Careers</a>
-                        </li>
-
-                        <li class="about">
-                            <a href="#">About</a> 
-                        </li>
-                            
-                        <div class="register">
-                            <a href="#" class="login">Login</a>
-                            <button class="register-btn" type="submit">Register</button>
+                            </li>          
+                       
+                            <li class="career">
+                                <a href="#">Careers</a>
+                            </li>
+    
+                            <li class="about">
+                                <a href="#">About</a> 
+                            </li>
                         </div>
+                        
+                            
+                        <ul class="register">
+                            <li class="login"><a href="#">Login</a></li>
+                            <li><button class="register-btn" type="submit">Register</button></li>
+                        </ul>
                     </ul>  
                 </nav>
                 
@@ -67,21 +70,24 @@
         </div>   
     </div>
 
-    <div class="remote-img">
-        <img src="/images/image-hero-mobile.png" alt="hero-img" class="mobile-img">
-        <img src="/images/image-hero-desktop.png" alt="hero-img" class="desktop-img">
-    </div>
-    <section class="remote">
-        <h1>Make remote work</h1>
-        <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
-        <button><a href="#">Learn more</a></button>
-    </section>
+    <div class="remote-grid">
+        <div class="remote-img">
+            <img src="/images/image-hero-mobile.png" alt="hero-img" class="mobile-img">
+            <img src="/images/image-hero-desktop.png" alt="hero-img" class="desktop-img">
+        </div>
 
-    <div class="sponsored-links">
-        <div class="img-1"><a href="#"><img src="/images/client-databiz.svg" alt="" class="sponsored-img"></a></div>
-        <div class="img-2"><a href="#"><img src="/images/client-audiophile.svg" alt="" class="sponsored-img"></a></div>
-        <div class="img-3"><a href="#"><img src="/images/client-meet.svg" alt="" class="sponsored-img"></a></div>
-        <div class="img-4"><a href="#"><img src="/images/client-maker.svg" alt=""></a></div>
+        <div class="remote">
+            <h1><span>Make </span>remote work</h1>
+            <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+            <button><a href="#">Learn more</a></button>
+
+            <div class="sponsored-links">
+                <div class="img-1"><a href="#"><img src="/images/client-databiz.svg" alt="" class="sponsored-img"></a></div>
+                <div class="img-2"><a href="#"><img src="/images/client-audiophile.svg" alt="" class="sponsored-img"></a></div>
+                <div class="img-3"><a href="#"><img src="/images/client-meet.svg" alt="" class="sponsored-img"></a></div>
+                <div class="img-4"><a href="#"><img src="/images/client-maker.svg" alt=""></a></div>
+            </div>
+        </div>
     </div>
 
     <script src="js/app.js"></script>
