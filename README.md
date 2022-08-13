@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](/images/snap%20screenshot.png; alt = Screenshot)
+![Alt Text](/images/snap%20screenshot.png; "Screenshot of Page")
 
 ### Links
 
