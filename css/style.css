@@ -1,4 +1,4 @@
-:root {
+--- --- :root {
   --primary-color: hsl(0, 0%, 98%);
   --secondary-color: hsl(0, 0%, 8%);
   --tertiary-color: hsl(0, 0%, 41%);
@@ -58,6 +58,7 @@ nav {
   width: 60%;
   transition: transform 0.5s ease-in-out;
   z-index: 999;
+  box-shadow: -1px 0px 5px 1px hsla(201deg, 13.82%, 70%, 0.52);
 }
 nav .toggle-close-btn {
   cursor: pointer;
@@ -160,27 +161,23 @@ nav .main-list .about:hover {
   font-weight: 700;
 }
 nav .main-list .register {
+  margin-left: 0;
   margin-top: 0.5rem;
-  padding: 1rem auto;
+  padding: 1rem 0;
 }
 nav .main-list .register .login {
   font-size: 18px;
   cursor: pointer;
+  text-align: center;
 }
 nav .main-list .register .login a {
   color: hsl(0deg, 0%, 41%);
-  position: relative;
-  left: 35%;
-  transform: translate(-35%);
 }
 nav .main-list .register .login:hover {
   font-weight: 700;
 }
 nav .main-list .register button {
   display: block;
-  position: relative;
-  left: 25%;
-  transform: translate(-25%);
   margin-top: 1rem;
   border: 2.5px solid hsl(0deg, 0%, 41%);
   border-radius: 1rem;
@@ -316,6 +313,7 @@ nav .main-list .register button:hover {
     height: auto;
     justify-content: space-between;
     padding: 0.5rem;
+    box-shadow: unset;
   }
   nav .main-list {
     display: flex;
@@ -386,22 +384,22 @@ nav .main-list .register button:hover {
   }
   nav .register {
     position: absolute;
-    top: -7px;
-    right: 25px;
-    float: right;
-    display: flex;
+    right: 12rem;
+    top: -9px;
     margin-top: 0;
   }
   nav .register .login a {
-    position: unset;
-    margin-right: 4rem;
+    position: relative;
+    top: -15px;
   }
   nav .register button {
     display: flex;
     position: absolute;
     top: -30px;
+    left: 50px;
     transform: translate(0%);
     margin-top: 0;
+    margin-left: 0.5rem;
     border-radius: 1.8rem;
   }
   .remote-grid {
