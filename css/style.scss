@@ -196,6 +196,7 @@ nav{
                 font-size: 18px;
                 cursor: pointer;
                 text-align: center;
+                margin-left: -1rem;
 
                 a{
                     color: hsl(0, 0%, 41%); 
@@ -336,6 +337,20 @@ nav{
     .toggle-close-btn{
         transform: rotate(90deg);
         transition: .3s;
+    }
+}
+
+@media only screen and (min-width: 540px) {
+    .register{
+        .register-list{
+           text-align: center;
+
+           button{
+            margin: auto;
+            display: flex;
+            justify-content: center; 
+           }
+        }
     }
 }
 
